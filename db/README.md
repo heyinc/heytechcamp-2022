@@ -8,15 +8,15 @@ Download and copy the single-binary executable for your environment from: <https
 ## Usage
 ### Export
 ```console
-$ mysqldef --export stores > schema.sql
+$ mysqldef -h127.0.0.1 -P3306 --export stores > schema.sql
 ```
 
 ### Dry-run
 ```console
-$ mysqldef --dry-run stores < schema.sql
+$ mysqldef -h127.0.0.1 -P3306 --dry-run stores < schema.sql
 ```
 
 ### Apply
 ```console
-$ mysqldef stores < schema.sql
+$ mysqldef -h127.0.0.1 -P3306 stores < schema.sql
 ```

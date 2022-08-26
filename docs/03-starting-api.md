@@ -77,7 +77,6 @@ mysql> show tables;
 | customer_addresses           |
 | customers                    |
 | inventory_units              |
-| item_images                  |
 | item_variations              |
 | items                        |
 | orders                       |
@@ -85,7 +84,7 @@ mysql> show tables;
 | stores                       |
 | users                        |
 +------------------------------+
-10 rows in set (0.01 sec)
+9 rows in set (0.01 sec)
 ```
 
 #### API の起動

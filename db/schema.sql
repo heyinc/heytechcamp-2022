@@ -37,14 +37,6 @@ CREATE TABLE `inventory_units` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `item_images` (
-  `id` varchar(24) DEFAULT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `item_id` varchar(24) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
 CREATE TABLE `item_variations` (
   `id` varchar(24) NOT NULL,
   `name` varchar(400) DEFAULT NULL,

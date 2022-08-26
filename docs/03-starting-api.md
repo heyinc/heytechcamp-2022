@@ -1,7 +1,6 @@
 # Starting API
 hey tech camp ではシステムの実装に用いるため Web API の参照実装を <https://github.com/heyinc/heytechcamp-2022/tree/main/api> で提供しています。
 参照実装を使わずにシステムを実装しても良いですが、Web API 以外に注力したい場合はこちらの実装を利用しても良いです。
-
 ここではその Web API 参照実装の使い方を説明します。
 
 ## データの種類
@@ -17,9 +16,11 @@ API は heytechcamp サーバ、もしくはローカル開発環境上で動か
 ### heytechcamp サーバで API を起動する方法
 heytechcamp サーバではデータ取り込み済みの MySQL が動いており、起動するだけで API 経由で値を取得可能です。
 
-heytechcamp サーバにログインすると存在する `heytechcamp-2022/api/` ディレクトリに移動し `./bin/rails s` で Rails を起動できます。
+heytechcamp サーバにログインすると存在する `heytechcamp-2022/api/` ディレクトリに移動し `./bin/setup` 実行後、 `./bin/rails s` で Rails を起動できます。
 
 ```console
+stores@internship-000:~/heytechcamp-2022/api$ ./bin/setup
+...
 stores@internship-000:~/heytechcamp-2022/api$ ./bin/rails s
 => Booting Puma
 => Rails 7.0.3.1 application starting in development 
@@ -56,7 +57,7 @@ $ curl http://127.0.0.1:3000/users/60cc1ec159110d2e3f30036c
 - 以下のように docker-compose で起動した MySQL の stores_development データベースの中に取り込みます
 ```console
 $ docker compose up --build
-$ ./bin/rails db:create
+$ ./bin/setup
 Created database 'stores_development'
 Created database 'stores_test'
 $ mysql -ustores -h127.0.0.1 -P4306 -ppassword < tmp/stores-dump.sql

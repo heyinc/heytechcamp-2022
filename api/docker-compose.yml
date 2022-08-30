@@ -1,0 +1,16 @@
+﻿version: '3'
+
+services:
+  db:
+    image: mysql:8.0.30
+    container_name: mysql_host
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: password
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+    ports:
+      - 4306:3306

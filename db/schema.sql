@@ -57,7 +57,6 @@ CREATE TABLE `items` (
   `id` varchar(24) NOT NULL,
   `name` varchar(200) DEFAULT NULL,
   `store_id` varchar(24) DEFAULT NULL,
-  `discount` int DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)

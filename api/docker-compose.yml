@@ -6,8 +6,8 @@ services:
     container_name: mysql_host
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: testdb
-      MYSQL_USER: user1
+      MYSQL_DATABASE: stores_%
+      MYSQL_USER: stores
       MYSQL_PASSWORD: password
       TZ: 'Asia/Tokyo'
     volumes:

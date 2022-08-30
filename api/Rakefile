@@ -4,3 +4,19 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+# migration 関連タスクを削除
+%w[
+  db:migrate
+  db:migrate:status
+  db:rollback
+  db:schema:cache:clear
+  db:schema:cache:dump
+  db:schema:dump
+  db:schema:load
+  db:setup
+  db:version
+  db:abort_if_pending_migrations
+].each do |task|
+  Rake::Task[task].clear
+end
